@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, "微軟正黑體", sans-serif;
+    background-image: url(images/canvas_bg.gif);
+}
+
+#top {
+    width: 1200px;
+    height: 80px; /*如果<div>沒有設定高度，當內部物件使用 float 時
+	                <div>的高度就會產生的問題，縮小或不見*/
+	              /*當<div>設定了高度，可以避開內部 float 產生的問題*/
+    margin: 0 auto;
+    background-color: #FFF;
+}
+
+#top img {
+    float: left; /*讓 logo 圖片靠左*/
+    padding-left: 45px; /*使用 padding 調整 logo 圖片的位置*/
+    padding-top: 15px;
+}
+
+#top ul {
+    float: right; /*讓整組 ul 選單靠右*/
+	              /*先把 img 和 ul 同階層的物件做水平排列*/
+    list-style: none;
+    display: block;
+    padding-right: 45px; /*使用 padding 調整 ul 選單的位置*/
+    padding-top: 25px;
+}
+
+#top li {
+    float: left; /*讓按鈕選單水平排列*/
+	             /*把 ul 內部的 li 做水平排列*/
+    margin-right: 5px; /*外間距，把按鈕分開一點*/
+}
+
+#top li a {
+    display: block;
+    width: 120px; /*設定寬度和高度，每一個按鈕的大小都一樣大*/
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #333;
+    text-decoration: none;
+    border: 1px solid #DDD;
+    border-radius: 10px; /*設定按鈕為圓角*/
+}
+
+#top li a:hover {
+    border: 1px solid #09C;
+    background-color: #09C;
+    color: #FFF;
+}
+
+#banner {
+    clear: both;
+    /*因為上方的 #top 中有使用 float*/
+    /*下方的 #banner 就會有浮上去的問題*/
+    /*不過目前上方的 #top 有設定高度*/
+    /*下方的 #banner 就不會有浮上去的問題*/
+    /*此時寫的 clear:both; 只是寫安心用的，可省略*/
+    width: 1200px;
+    height: 300px;
+    margin: 0 auto;
+    background-image: url(../images/banner-3.jpg);
+}
+
+#banner h2 {
+    font-size: 40px;
+    padding-top: 100px;
+    padding-left:530px;
+   
+    color: #FFF; /*https://kknews.cc/zh-tw/tech/l8ng44z.html  如何拉高網頁被搜尋到的名次....白色背景與白色文字是一種作弊.... 會被google處罰  */
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 3px #222; /*文字加上陰影可以避開白色背景與白色文字被Google罰錢的危機*/
+}
+
+#banner h3 {
+    font-size: 20px;
+    
+    padding-left:550px;
+   
+    color: #FFF; /*https://kknews.cc/zh-tw/tech/l8ng44z.html  如何拉高網頁被搜尋到的名次....白色背景與白色文字是一種作弊.... 會被google處罰  */
+    letter-spacing: 2px;
+    text-shadow: 3px 3px 3px #222; /*文字加上陰影可以避開白色背景與白色文字被Google罰錢的危機*/
+}
+
+#content{
+	width: 1000px;
+	margin: 0 auto;
+	background-color: #FFFFFF;
+	padding: 40px 100px;
+	overflow: hidden;/*這個設定可以自動抓取content裡的子Div的高度*/
+}
+
+
+
+#content .leftDiv{
+	width: 450px;
+	float: left;
+}
+
+#content .rightDiv{
+	width: 450px;
+	float: right;
+}
+
+
+#content h1{
+	color: #85B9FF;
+	padding-bottom: 10px;
+	text-align: center;
+	border-bottom:3px dotted #85B9FF;
+	margin-bottom: 20px;
+	
+}
+
+#content p{
+	font-size: 15px;
+	line-height: 1.8;
+	padding-bottom: 1em;
+	text-align: justify;
+	
+}
+
+#Down_fixed{
+	width: 100%;
+	height: 70px;
+	background-color: rgba(133,185,255,0.5);
+	position: fixed;
+	bottom: 0;/*Y座標的最下方做 bottom....相當於固定在最下方*/
+	z-index: 600;
+	border-radius: 20px 20px 0px 0px;
+	
+	
+}
+
+#menu{
+	text-align: center;
+	line-height: 1.5;
+	position: fixed;
+	right: 0;/*X座標的最右邊叫做 right....相當於固定在最右邊*/
+	top: 50%;
+	width: 12em;
+	height:8em;
+	z-index: 600;
+	background-color: rgba(133,185,255,0.5);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding: 1em;
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
